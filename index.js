@@ -18,18 +18,19 @@ async function GetData() {
 
            const data = await response.json();
            const books = data.results.books;
-          let dataStuff = "";
+          //let dataStuff = "";
+          let titleData = "";
+          let authorData = "";
            let bookImg = "";
-           //let content = "";
+           let content = "";
            
-           for (let i = 0; i < books.length; i++) {
+           for (let i = 0; i < books.length - 10; i++) {
 
-             dataStuff += `title: ${books[i].title} <br> author: ${books[i].author.toUpperCase()}<br><br>`;
-             
-             
-             bookImg = books[0].book_image;
-
+            titleData += `${books[i].title}<br>`;
+            authorData += `${books[i].author}<br>`;
+            bookImg += `${books[i].book_image}`;
             //const book = books[i];
+            
         //     content += `
         //     <div>
         //         <p>Title: ${book.title}</p>
@@ -40,55 +41,16 @@ async function GetData() {
         // `;
 
             
-
-            // const imgElement = document.createElement("img");
-            // imgElement.src = books[i].book_image;
-
-            //imgElement.alt = book.title;
-            // imgElement.style.display = "block";
-           // console.log(books[i].title, books[i].author)
-            // const dataStuff = `title: ${books[i].title}, <br>author: ${books[i].author.toUpperCase()}`;
-
-            // dataStuff += `title: ${books[i].title} <br> author: ${books[i].author.toUpperCase() <br>  } <br><br>`;
-
-            //bookImg = books[i].book_image;
-            // console.log(dataStuff);
-
-            // const imgElement = document.createElement("img");
-            // imgElement.src = books[i].book_image;
-            
-            // imgElement.style.display = "block";
-
-          //  document.getElementById("book-img").appendChild(imgElement);
-      
-           
-        
-        //    console.log(books[i].title, books[i].author)
-           
            }
-           document.getElementById("data").innerHTML = dataStuff;
+          //document.getElementById("data").innerHTML = content;
+          document.getElementById("title").innerHTML = titleData;
+          console.log(titleData);
+          document.getElementById("author").innerHTML = authorData;
+          const imgElement = document.getElementById("book-img");
+          imgElement.src = bookImg;
+          imgElement.style.display = "block";
            
-           const imgElement = document.getElementById("book-img");
-           imgElement.src=bookImg;
-           imgElement.style.display = "block";
-           console.log(dataStuff)
-           
-           //document.getElementById("data").innerHTML = content;
-
-        //    const bookImg = books[i].book_image;
-
-           //document.getElementById("data").innerHTML = dataStuff
-           
-
-        //    const imgElement = document.getElementById("book-img");
-        //    imgElement.src = books[0].book_image;
-        //    imgElement.style.display = "block";
-           
-
-            // const data2 = document.getElementById("data");
-            // data2.innerHTML = dataStuff;
-     /*      console.log(data.results.books);  */
-           
+    
 
        }
        catch(error) {
