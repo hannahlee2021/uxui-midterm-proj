@@ -12,24 +12,16 @@
 </head>
 <body>
 
-    <input id = "date" type="text" placeholder="type date (YYYY-MM-DD)">
-      <button onclick="goToDisplayPage()">Get Data</button>
-
-      <script>
-        function goToDisplayPage() {
-            const dateEntry = document.getElementById("date").value;
-            window.location.href = `result.html?date=${dateEntry}`;
-        }
-    </script>
-    <!-- <a href = "result.html"><button id = "pokemon-button" onclick="GetData()">press</button></a> -->
+    
     <br>
 
 
     <br><br>
+    <a href="javascript:javascript:history.go(-1)"><img id = "arrow" src="arrow.svg"></a>
   
-   
+    <div id = "data">
 
     </div>
-    <!-- <script src="index.js"></script> -->
+    <script src="index.js"></script>
 </body>
 </html>
