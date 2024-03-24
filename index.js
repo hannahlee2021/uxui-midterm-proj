@@ -11,10 +11,11 @@ window.onload = async function () {
         //pulls the value that is inputed by the user in the textbox (in this cas, it is the date to see bestsellers on that date)
         const urlParams = new URLSearchParams(window.location.search);
     const dateEntry = urlParams.get('date');
+    const genreEntry = urlParams.get('genre');
         //const dateEntry = document.getElementById("date").value;
 
         //calls the api and also inputs the date user inputed into the text box inside of the query
-        const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/${dateEntry}/hardcover-fiction.json?api-key=` + apikey);
+        const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/${dateEntry}/${genreEntry}.json?api-key=` + apikey);
 
            //if the call happens successfully (data is able to be retreived from the API database), then the console will print a success message
            //if the call does not happen successfully (data cannot be accessed), then the console will print a failure message
@@ -37,8 +38,8 @@ window.onload = async function () {
            let bookImg = "";
            let content = "";
            
-           //looping through each component of the books key/object and subtracting the results by 10 entries? in order to only display 5 books
-           for (let i = 0; i < books.length - 10; i++) {
+           //looping through each component of the books key/object and subtracting the results by 7 entries in order to display 3 book for categories with 10 items and 8 items for categories with 15 items in object
+           for (let i = 0; i < books.length - 7; i++) {
 
            //initialized variable storing the books object for each loop?
             const book = books[i];

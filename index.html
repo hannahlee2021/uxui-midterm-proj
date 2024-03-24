@@ -11,16 +11,60 @@
     <title>Document</title>
 </head>
 <body>
+    <div class = "header">
+        <h1 id = "title">
+            looking for new books to read?
+        </h1>
+        <h2 id = "sub-title">
+            why not start with the bestsellers!
+        </h2>
+        <h3 id = "sub-text">
+            sort by date entry (YYYY-MM-DD) & genre
+        </h3>
+    </div>
 
-    <input id = "date" type="text" placeholder="type date (YYYY-MM-DD)">
-      <button onclick="goToDisplayPage()">Get Data</button>
+    <div class = "submission-container">
 
-      <script>
-        function goToDisplayPage() {
-            const dateEntry = document.getElementById("date").value;
-            window.location.href = `result.html?date=${dateEntry}`;
-        }
-    </script>
+      
+        
+        <div class = "date-input-container">
+            <h4 id = "date-text">date</h4>
+            <input id = "date" type="text" placeholder="type date (YYYY-MM-DD)" required>
+        </div>
+        <div class = "genre-input-container">
+            <h4 id = "genre-text">genre</h4>
+            <label for = "genre"></label>
+            <select id= "genre">
+                <option value = "hardcover-fiction">fiction</option>
+                <option value = "hardcover-nonfiction">nonfiction</option>
+                <option value = "young-adult-hardcover">young adult</option>
+                <option value = "series-books">series</option>
+                <option value = "advice-how-to-and-miscellaneous">advice</option>
+
+            </select>
+        </div>
+
+  
+
+    <div class = "submit-container">
+        
+        <button id = "button" onclick="goToDisplayPage()">
+            <img src="book-icon.svg">
+        </button>
+   
+        <script>
+          function goToDisplayPage() {
+              const dateEntry = document.getElementById("date").value;
+              const genreEntry = document.getElementById("genre").value;
+              window.location.href = `result.html?date=${dateEntry}&genre=${genreEntry}`;
+          }
+      </script>
+    </div>
+        
+       
+    
+    </div>
+
     <!-- <a href = "result.html"><button id = "pokemon-button" onclick="GetData()">press</button></a> -->
     <br>
 
