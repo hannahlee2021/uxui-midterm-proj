@@ -1,0 +1,85 @@
+h1 {
+    color: #000;
+text-align: center;
+font-family: Notable;
+font-size: 70px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+p {
+    color: #768BB8;
+
+    font-family: "GFS Neohellenic";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.data {
+   
+}
+
+img {
+    position: relative;
+    top: 300px;
+    z-index: -1;
+}
+.title-author {
+    
+    padding-left: 40em;
+    
+}
+/* #title {
+   
+   
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+
+#author {
+   
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+} */
+
+/* #book-img {
+
+position: relative;
+top: -300px;
+flex-shrink: 0;
+    border: 3px solid #FECF5A;
+} */
+
+.image-link {
+  
+    position: relative;
+    top: -900px;
+  
+}
+
+#book-img {
+    width: 326px;
+    height: 495px;
+    flex-shrink: 0;
+    border: 3px solid #FECF5A; 
+}
+
+.description {
+    width: 700px;
+    
+   padding-left: 45em;
+    
+
+}
+
+#arrow {
+   top: 10px;
+}
