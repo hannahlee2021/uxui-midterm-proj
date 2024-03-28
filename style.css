@@ -1,3 +1,7 @@
+body {
+    z-index: -1;
+    overflow: hidden;
+}
 h1 {
     color: #768BB8;
     text-align: center;
@@ -39,8 +43,10 @@ h4 {
 }
 
 .header {
+    position: relative;
     display: flex;
     flex-direction: column;
+    z-index:1;
 
     /* justify-content: center; */
     align-items: center;
@@ -68,6 +74,8 @@ top: -20px; */
 }
 
 .submission-container {
+    position: relative;
+    z-index: 1;
 margin-left:-199px;
 }
 
@@ -116,7 +124,7 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 #genre {
-    font-size: 30px;
+    font-size: 18px;
     font-family: "GFS Neohellenic";
     width: 314px;
     height: 44px;
@@ -145,4 +153,9 @@ button, input[type="submit"], input[type="reset"] {
 #arrow {
     color: #99C079;
     width: 200px;
+}
+
+#defaultCanvas0 {
+    position: relative;
+    top: -700px;
 }

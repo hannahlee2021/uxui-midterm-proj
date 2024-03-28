@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +18,12 @@
             looking for new books to read?
         </h1>
         <h2 id = "sub-title">
-            why not start with the bestsellers!
+            consult the bestsellers throughout time!
         </h2>
         <h3 id = "sub-text">
             sort by date entry (YYYY-MM-DD) & genre
+            <br>
+            or current for most recent bestsellers!
         </h3>
     </div>
 
@@ -29,7 +33,7 @@
         
         <div class = "date-input-container">
             <h4 id = "date-text">date</h4>
-            <input id = "date" type="text" placeholder="type date (YYYY-MM-DD)" required>
+            <input id = "date" type="text" placeholder="type date (YYYY-MM-DD) or current" required>
         </div>
         <div class = "genre-input-container">
             <h4 id = "genre-text">genre</h4>
@@ -77,5 +81,9 @@
 
     </div>
     <script src="index.js"></script>
+      <script src = "sketch.js"></script>
+    
+  
 </body>
+
 </html>

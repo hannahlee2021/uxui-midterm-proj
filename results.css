@@ -21,15 +21,32 @@ p {
    
 }
 
-img {
+#title-circle {
+    width: 50%;
     position: relative;
-    top: 300px;
+    padding-left: 200px;
+    top: 200px;
     z-index: -1;
 }
+
+#author-circle {
+    width: 50%;
+    position: relative;
+    padding-left: 200px;
+    top: 30px;
+    z-index: -1;
+
+}
 .title-author {
-    
+    position: relative;
     padding-left: 40em;
+    top: -200px;
     
+}
+
+#author {
+    position: relative;
+    top: -150px;
 }
 /* #title {
    
@@ -59,21 +76,26 @@ flex-shrink: 0;
 } */
 
 .image-link {
-  
+    
     position: relative;
+    padding-left: 100px;
     top: -900px;
   
 }
 
 #book-img {
-    width: 326px;
-    height: 495px;
+    /* width: 326px;
+    height: 495px; */
+    width: 423px;
+    height: 569px;
     flex-shrink: 0;
     border: 3px solid #FECF5A; 
 }
 
 .description {
     width: 700px;
+    position: relative;
+    top: -250px;
     
    padding-left: 45em;
     
@@ -81,5 +103,13 @@ flex-shrink: 0;
 }
 
 #arrow {
+    /* position: relative; */
+    position: sticky;
+    
    top: 10px;
+   z-index: 1;
+}
+
+#error-message {
+    line-height: 1.8;
 }
